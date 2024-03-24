@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const http_1 = __importDefault(require("http"));
 const socket_io_1 = require("socket.io");
 const app = (0, express_1.default)();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 const server = http_1.default.createServer(app);
 const io = new socket_io_1.Server(server, {
     cors: {
@@ -69,5 +69,5 @@ io.on("connection", (socket) => {
     });
 });
 server.listen(PORT, () => {
-    console.log("Server is running on port 5000");
+    console.log("Server is running on port 8080");
 });
