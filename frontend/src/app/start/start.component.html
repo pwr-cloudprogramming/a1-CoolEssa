@@ -1,0 +1,18 @@
+<div class="row">
+    <h1 class="col-12 title">Tic-tac-toe</h1>
+</div>
+<form [formGroup]="form" (submit)="onSubmit()">
+    <div class="row">
+        <mat-form-field class="offset-4 col-2">
+            <mat-label>Player name</mat-label>
+            <input formControlName="playerName" matInput>
+        </mat-form-field>
+        <mat-form-field class="col-2">
+            <mat-label>Game ID</mat-label>
+            <input formControlName="gameId" matInput type="number">
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <button mat-flat-button class="offset-5 col-2 offset-5" color="primary" type="submit">Play!</button>
+    </div>
+</form>

@@ -16,4 +16,4 @@ services:
       dockerfile: ./Dockerfile
     container_name: tictactoe_frontend
     ports:
-      - "8081:3000"
+      - "8081:4200"

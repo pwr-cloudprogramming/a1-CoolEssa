@@ -1,0 +1,15 @@
+<div [ngSwitch]="state.value">
+    <div *ngSwitchCase="CROSSES">
+        <mat-icon class="red" fontIcon="close"></mat-icon>
+    </div>
+    <div *ngSwitchCase="NOUGHTS">
+        <mat-icon class="green" fontIcon="radio_button_unchecked"></mat-icon>
+    </div>
+    <div *ngSwitchDefault>
+        <button *ngIf="isPlayerTurn; else disabledButton" mat-flat-button color="primary" (click)="onClick()">Put</button>
+        
+        <ng-template #disabledButton>
+            <button mat-flat-button color="primary" disabled>Put</button>
+        </ng-template>
+    </div>
+</div>

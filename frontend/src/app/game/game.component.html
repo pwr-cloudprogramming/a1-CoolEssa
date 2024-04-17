@@ -1,0 +1,60 @@
+<div class="row">
+    <h1 class="col-12 title">Tic-tac-toe</h1>
+</div>
+<div class="row">
+    <div class="col-2">
+        <div class="row">
+            <div class="col-1">
+                <mat-icon class="green" fontIcon="radio_button_unchecked"></mat-icon>
+            </div>
+            <p class="col-6">{{getForm('noughtsPlayerName').value}}</p>
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <mat-icon class="red" fontIcon="close"></mat-icon>
+            </div>
+            <p class="col-6">{{getForm('crossesPlayerName').value}}</p>
+        </div>
+        <div class="row">
+            <p class="col-12">{{getForm('gameState').value}}</p>
+        </div>
+        <div class="row" *ngIf="hasGameEnded">
+            <button mat-flat-button color="primary" (click)="restartGame()">Restart game</button>
+        </div>
+    </div>
+    <div class="col-10">
+        <div class="row">
+            <div class="offset-3 col-4">
+                <mat-grid-list cols="3" rowHeight="1:1">
+                    <mat-grid-tile class="border-bottom border-right">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position0')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="border-bottom border-right">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position1')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="border-bottom">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position2')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="border-bottom border-right">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position3')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="border-bottom border-right">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position4')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="border-bottom">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position5')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="border-right">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position6')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile class="border-right">
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position7')"></ce-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <ce-field (fieldChanged)="fieldChanged()" [isPlayerNoughts]="isPlayerNoughts" [playerTurn]="playerTurn" [state]="getForm('field.position8')"></ce-field>
+                    </mat-grid-tile>
+                </mat-grid-list> 
+            </div>
+        </div>
+    </div>
+</div>
