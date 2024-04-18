@@ -1,6 +1,7 @@
 FROM node:20-alpine
 WORKDIR /app
 COPY . .
+RUN apk --no-cache add curl
 RUN chmod u+x ./get-ec2-address.sh
 RUN ./get-ec2-address.sh
 RUN npm install
