@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "get-ec2-address": "chmod u+x ./get-ec2-address.sh && ./get-ec2-address.sh",
     "start-on-docker": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

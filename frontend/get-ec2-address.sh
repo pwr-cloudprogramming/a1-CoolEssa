@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 API_URL="http://169.254.169.254/latest/api"
 TOKEN=`curl -X PUT "$API_URL/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 600"` 
 TOKEN_HEADER="X-aws-ec2-metadata-token: $TOKEN"
